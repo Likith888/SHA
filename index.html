@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Healthcare Assistant</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">+</div>
+    <div>
+      <h1>Smart Healthcare Assistant</h1>
+      <span>AI-assisted symptom analysis</span>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <h2>Your Smart Health Companion</h2>
+    <p>Analyze symptoms using AI-assisted logic and medical datasets.</p>
+  </section>
+
+  <section class="card">
+    <h3>Patient Information</h3>
+
+    <div class="grid">
+      <input id="nameInput" type="text" placeholder="Full Name">
+      <input id="ageInput" type="number" placeholder="Age">
+      <select id="genderInput">
+        <option value="">Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <input id="historyInput" type="text"
+      placeholder="Previous medical history (diabetes, BP, asthma etc.)">
+
+    <h3>Symptoms</h3>
+    <input id="symptomInput" type="text" placeholder="fever, cough, headache">
+    <input id="daysInput" type="number" placeholder="Symptoms from how many days?">
+
+    <button id="predictBtn" disabled>Analyze Symptoms</button>
+    <button id="downloadBtn" disabled>Download Report (PDF)</button>
+  </section>
+
+  <section class="result-wrapper">
+    <div id="result" class="result-card"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  AI-assisted suggestions only • Not a medical diagnosis
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
